@@ -116,7 +116,7 @@ class placement extends StatelessWidget {
                         padding: const EdgeInsets.all(15.0),
                         child: Container(
                           child: Image.asset(
-                            "assets/images/fang.png",
+                            "assets/images/fang1.png",
                             fit: BoxFit.fitWidth,
                           ),
                         ),

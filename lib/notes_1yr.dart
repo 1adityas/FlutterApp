@@ -1,4 +1,5 @@
 import 'package:app/fontlib/my_flutter_app_icons.dart';
+import 'package:app/notes_2yr.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:responsive_screen/responsive_screen.dart';
@@ -142,24 +143,35 @@ Widget item(
                   ),
                 ),
                 Container(
-                  height: hp(17),
+                  height: hp(15),
                   width: wp(22),
-                  child: CachedNetworkImage(
-                    placeholder: (context, asset) =>
-                        Image.asset('assets/images/loading.gif'),
-                    fit: BoxFit.fill,
-                    alignment: Alignment.centerRight,
-                    imageUrl: asset,
-                    fadeInDuration: Duration(milliseconds: 500),
-                    placeholderFadeInDuration: Duration(milliseconds: 1000),
-                    errorWidget: (context, url, error) => Icon(Icons.error),
-                  ),
+                  child: checkurl(asset),
                 ),
               ],
             )),
       ),
     ),
   );
+}
+
+Widget checkurl(String asset) {
+  if (asset.contains('http'))
+    return CachedNetworkImage(
+      placeholder: (context, asset) => Image.asset('assets/images/loading.gif'),
+      fit: BoxFit.fill,
+      alignment: Alignment.centerRight,
+      imageUrl: asset,
+      fadeInDuration: Duration(milliseconds: 500),
+      placeholderFadeInDuration: Duration(milliseconds: 1000),
+      errorWidget: (context, url, error) => Icon(Icons.error),
+    );
+  else {
+    return Image(
+      fit: BoxFit.fill,
+      alignment: Alignment.topRight,
+      image: AssetImage(asset),
+    );
+  }
 }
 
 Widget tab(
@@ -170,14 +182,17 @@ Widget tab(
     children: <Widget>[
       Padding(
         padding: EdgeInsets.all(8),
-        child: Container(
-          height: hp(5),
-          width: wp(60),
-          child: TextOneLine(
-            s,
-            overflow: TextOverflow.fade,
-            style: TextStyle(
-              fontSize: diag * .025,
+        child: FittedBox(
+          fit: BoxFit.scaleDown,
+          child: Container(
+            height: hp(3),
+            width: wp(60),
+            child: TextOneLine(
+              s,
+              overflow: TextOverflow.fade,
+              style: TextStyle(
+                fontSize: diag * .02,
+              ),
             ),
           ),
         ),
