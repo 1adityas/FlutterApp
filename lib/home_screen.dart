@@ -52,7 +52,7 @@ class _HomeScreenState extends State<HomeScreen> {
             // Builder from the tree
             builder: (BuildContext context) => HawkFabMenu(
                   icon: AnimatedIcons.menu_arrow,
-                  fabColor: Colors.red[50],
+                  fabColor: Color.fromRGBO(170, 145, 227, 1.0),
                   iconColor: Colors.black38,
                   items: [
                     HawkFabMenuItem(
@@ -65,6 +65,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               transitionsBuilder:
                                   (context, animation, animationTime, child) {
                                 animation = CurvedAnimation(
+                                    //animation
                                     parent: animation,
                                     curve: Curves.elasticInOut);
                                 return ScaleTransition(
@@ -149,9 +150,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           ),
                           Column(children: [
                             // SizedBox(height: size.height * .099),
-                            SizedBox(
-                              height: size.height * .087,
-                            ),
+                            SizedBox(height: size.height * .087),
 
                             Padding(
                               padding: const EdgeInsets.fromLTRB(20, 0, 20, 2),
@@ -176,6 +175,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         ],
                       ),
                       SafeArea(
+                        //icon,
                         child: Padding(
                           padding: EdgeInsets.only(
                               top: 15, right: 15, left: 15, bottom: 3),
@@ -191,7 +191,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
                                 // color: Colors.yellow,
                                 margin:
-                                    EdgeInsets.only(bottom: size.height * .24),
+                                    EdgeInsets.only(bottom: size.height * .235),
                                 child: Row(
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: <Widget>[
@@ -214,15 +214,6 @@ class _HomeScreenState extends State<HomeScreen> {
                                                 blurRadius: 10)
                                           ],
                                         )),
-                                    //                           child: CircleAvatar(
-                                    //   radius: 32,
-                                    //   backgroundImage: Image.asset(
-                                    //       'assets/images/fang1.png'),
-                                    // ),
-
-                                    // SizedBox(
-                                    //   width: 55,
-                                    // ),
                                     Column(
                                       mainAxisAlignment:
                                           MainAxisAlignment.center,
@@ -410,7 +401,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                                               8.0),
                                                       child: Text('Books',
                                                           style: TextStyle(
-                                                              // fontSize: 20,
+                                                              fontSize: hp(3),
                                                               fontWeight:
                                                                   FontWeight
                                                                       .bold,
@@ -459,7 +450,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                                         style: TextStyle(
                                                             fontWeight:
                                                                 FontWeight.bold,
-                                                            // fontSize: 20,
+                                                            fontSize: hp(3),
                                                             fontFamily:
                                                                 'cardTextStyle')),
                                                   )
@@ -541,41 +532,10 @@ class _HomeScreenState extends State<HomeScreen> {
                                   ],
                                 ),
                               ),
-
-                              // Row(
-                              //   children: <Widget>[
-                              //     Expanded(
-                              //       child: Container(
-                              //         child: Text('ERP'),
-                              //       ),
-                              //     ),
-                              //   ],
-                              // ),
                             ],
                           ),
                         ),
                       ),
-                      // Column(
-                      //   children: [
-                      //     Container(
-                      //       height: size.height * .95,
-                      //     ),
-                      //     Row(
-                      //       children: <Widget>[
-                      //         Expanded(
-                      //           child: Container(
-                      //             child: Text('ERP'),
-                      //           ),
-                      //         ),
-                      //         Expanded(
-                      //           child: Container(
-                      //             child: Text('About us'),
-                      //           ),
-                      //         ),
-                      //       ],
-                      //     )
-                      //   ],
-                      // ),
                     ],
                   ),
                 )));
