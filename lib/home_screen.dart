@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:app/GPA.dart';
 import 'package:app/books.dart';
 import 'package:app/course_notes.dart';
@@ -45,6 +47,8 @@ class _HomeScreenState extends State<HomeScreen> {
     var size = MediaQuery.of(context).size;
     final wp = Screen(context).wp; //specify wp
     final hp = Screen(context).hp;
+    var diagonal =
+        sqrt(((size.height) * (size.height)) + ((size.width) * (size.width)));
     return Scaffold(
         backgroundColor: Colors.red[300],
         body: Builder(
@@ -61,13 +65,13 @@ class _HomeScreenState extends State<HomeScreen> {
                         Navigator.push(
                             context,
                             PageRouteBuilder(
-                              transitionDuration: Duration(seconds: 1),
+                              transitionDuration: Duration(milliseconds: 150),
                               transitionsBuilder:
                                   (context, animation, animationTime, child) {
-                                animation = CurvedAnimation(
-                                    //animation
-                                    parent: animation,
-                                    curve: Curves.elasticInOut);
+                                // animation = CurvedAnimation(
+                                //     //animation
+                                //     parent: animation,
+                                //     curve: Curves.elasticInOut);
                                 return ScaleTransition(
                                   alignment: Alignment.center,
                                   scale: animation,
@@ -178,7 +182,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         //icon,
                         child: Padding(
                           padding: EdgeInsets.only(
-                              top: 15, right: 15, left: 15, bottom: 3),
+                              top: 15, right: 15, left: 15, bottom: 5),
                           child: Column(
                             children: <Widget>[
                               Container(
@@ -187,11 +191,13 @@ class _HomeScreenState extends State<HomeScreen> {
                                     right: 0,
                                     left: 0,
                                     bottom: size.height * .1),
-                                height: size.height * .2,
+                                height:
+                                    diagonal * .175, //this is the fucking stuff
 
                                 // color: Colors.yellow,
-                                margin:
-                                    EdgeInsets.only(bottom: size.height * .235),
+                                margin: EdgeInsets.only(
+                                    bottom: diagonal *
+                                        .16), //change this argument here
                                 child: Row(
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: <Widget>[
@@ -242,8 +248,9 @@ class _HomeScreenState extends State<HomeScreen> {
                               // Container(
                               //   height: size.height * .05, // to make this responsive
                               // ),
+
                               Container(
-                                height: hp(50),
+                                height: hp(55),
                                 //  height: 300,
                                 child: Column(
                                   children: <Widget>[
@@ -322,7 +329,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                                     child: Text(
                                                       'Placement Material',
                                                       style: TextStyle(
-                                                          fontSize: hp(2.4),
+                                                          fontSize: hp(2.05),
                                                           fontWeight:
                                                               FontWeight.bold,
                                                           fontFamily:
@@ -339,7 +346,8 @@ class _HomeScreenState extends State<HomeScreen> {
                                                   context,
                                                   PageRouteBuilder(
                                                     transitionDuration:
-                                                        Duration(seconds: 1),
+                                                        Duration(
+                                                            milliseconds: 1000),
                                                     transitionsBuilder:
                                                         (context,
                                                             animation,
@@ -401,7 +409,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                                       flex: 2,
                                                       child: Text('Books',
                                                           style: TextStyle(
-                                                              fontSize: hp(2.6),
+                                                              fontSize: hp(2.4),
                                                               fontWeight:
                                                                   FontWeight
                                                                       .bold,
@@ -418,9 +426,33 @@ class _HomeScreenState extends State<HomeScreen> {
                                             onTap: () {
                                               Navigator.push(
                                                   context,
-                                                  MaterialPageRoute(
-                                                      builder: (context) =>
-                                                          Gpa()));
+                                                  PageRouteBuilder(
+                                                    transitionDuration:
+                                                        Duration(
+                                                            milliseconds: 1000),
+                                                    transitionsBuilder:
+                                                        (context,
+                                                            animation,
+                                                            animationTime,
+                                                            child) {
+                                                      animation =
+                                                          CurvedAnimation(
+                                                              parent: animation,
+                                                              curve: Curves
+                                                                  .elasticInOut);
+                                                      return ScaleTransition(
+                                                        alignment:
+                                                            Alignment.center,
+                                                        scale: animation,
+                                                        child: child,
+                                                      );
+                                                    },
+                                                    pageBuilder: (context,
+                                                        animation,
+                                                        animationTime) {
+                                                      return Gpa();
+                                                    },
+                                                  ));
                                             },
                                             child: Card(
                                               shape: RoundedRectangleBorder(
@@ -450,7 +482,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                                         style: TextStyle(
                                                             fontWeight:
                                                                 FontWeight.bold,
-                                                            fontSize: hp(2.6),
+                                                            fontSize: hp(2.4),
                                                             fontFamily:
                                                                 'cardTextStyle')),
                                                   )
@@ -517,7 +549,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                                     flex: 2,
                                                     child: Text('Course Notes',
                                                         style: TextStyle(
-                                                            fontSize: hp(2.4),
+                                                            fontSize: hp(2.3),
                                                             fontWeight:
                                                                 FontWeight.bold,
                                                             fontFamily:
