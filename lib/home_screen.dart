@@ -135,7 +135,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             children: [
                               // SizedBox(height: 70),
                               Container(
-                                height: size.height * .4,
+                                height: diagonal * .35,
                                 decoration: BoxDecoration(
                                   boxShadow: <BoxShadow>[
                                     BoxShadow(
@@ -153,9 +153,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             ],
                           ),
                           Column(children: [
-                            // SizedBox(height: size.height * .099),
-                            SizedBox(height: size.height * .087),
-
+                            SizedBox(height: diagonal * .068),
                             Padding(
                               padding: const EdgeInsets.fromLTRB(20, 0, 20, 2),
                               child: ClipPath(
@@ -164,7 +162,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                         borderRadius: BorderRadius.all(
                                             Radius.circular(30)))),
                                 child: Container(
-                                  height: size.height * .3,
+                                  height: diagonal * .27,
                                   decoration: BoxDecoration(
                                     borderRadius: BorderRadius.circular(40),
                                     image: DecorationImage(
@@ -197,7 +195,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                 // color: Colors.yellow,
                                 margin: EdgeInsets.only(
                                     bottom: diagonal *
-                                        .16), //change this argument here
+                                        .17), //change this argument here
                                 child: Row(
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: <Widget>[
@@ -399,7 +397,6 @@ class _HomeScreenState extends State<HomeScreen> {
                                                                 .all(8.0),
                                                         child: Image.asset(
                                                           'assets/images/books.png', //add img here
-                                                          // height: size.height*.4
                                                         ),
                                                       ),
                                                     ),

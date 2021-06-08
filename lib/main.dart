@@ -8,7 +8,7 @@ import 'dart:async';
 import 'package:firebase_core/firebase_core.dart';
 import 'dart:math';
 
-void main() async { 
+void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
   runApp(MyApp());
