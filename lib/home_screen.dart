@@ -302,10 +302,10 @@ class _HomeScreenState extends State<HomeScreen> {
                                               elevation: 10,
                                               child: Column(
                                                 mainAxisAlignment:
-                                                    MainAxisAlignment.start,
+                                                    MainAxisAlignment.center,
                                                 children: <Widget>[
                                                   Expanded(
-                                                    flex: 2,
+                                                    flex: 5,
                                                     child: Padding(
                                                       padding:
                                                           const EdgeInsets.all(
@@ -318,6 +318,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                                     ),
                                                   ),
                                                   Expanded(
+                                                    flex: 2,
                                                     child: Text(
                                                       'Placement Material',
                                                       style: TextStyle(
@@ -383,6 +384,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                                       MainAxisAlignment.center,
                                                   children: <Widget>[
                                                     Expanded(
+                                                      flex: 5,
                                                       child: Padding(
                                                         padding:
                                                             const EdgeInsets
@@ -395,10 +397,8 @@ class _HomeScreenState extends State<HomeScreen> {
                                                     ),
                                                     //SizedBox(height: 10),
                                                     // SizedBox(height: 20),
-                                                    Padding(
-                                                      padding:
-                                                          const EdgeInsets.all(
-                                                              8.0),
+                                                    Expanded(
+                                                      flex: 2,
                                                       child: Text('Books',
                                                           style: TextStyle(
                                                               fontSize: hp(3),
@@ -433,7 +433,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                                     MainAxisAlignment.center,
                                                 children: <Widget>[
                                                   Expanded(
-                                                    flex: 2,
+                                                    flex: 5,
                                                     child: Padding(
                                                       padding:
                                                           const EdgeInsets.all(
@@ -444,7 +444,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                                     ),
                                                   ),
                                                   Expanded(
-                                                    flex: 1,
+                                                    flex: 2,
                                                     child: Text(
                                                         'GPA Calculator',
                                                         style: TextStyle(
@@ -502,7 +502,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                                     MainAxisAlignment.center,
                                                 children: <Widget>[
                                                   Expanded(
-                                                    flex: 2,
+                                                    flex: 5,
                                                     child: Padding(
                                                       padding:
                                                           const EdgeInsets.all(
@@ -514,6 +514,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                                     ),
                                                   ),
                                                   Expanded(
+                                                    flex: 2,
                                                     child: Text('Course Notes',
                                                         style: TextStyle(
                                                             fontSize: hp(3),
