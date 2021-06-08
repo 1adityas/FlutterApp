@@ -52,7 +52,7 @@ class _HomeScreenState extends State<HomeScreen> {
             // Builder from the tree
             builder: (BuildContext context) => HawkFabMenu(
                   icon: AnimatedIcons.menu_arrow,
-                  fabColor: Color.fromRGBO(170, 145, 227, 1.0),
+                  fabColor: Color.fromRGBO(106, 210, 211, 1.0),
                   iconColor: Colors.black38,
                   items: [
                     HawkFabMenuItem(
@@ -89,10 +89,10 @@ class _HomeScreenState extends State<HomeScreen> {
                     HawkFabMenuItem(
                       label: 'ERP',
                       ontap: () {
-                        Scaffold.of(context)..hideCurrentSnackBar();
-                        Scaffold.of(context).showSnackBar(
-                          SnackBar(content: Text('ERP')),
-                        );
+                        // Scaffold.of(context)..hideCurrentSnackBar();
+                        // Scaffold.of(context).showSnackBar(
+                        //   SnackBar(content: Text('ERP')),)
+                        launchurl('https://evarsity.srmist.edu.in/srmsip/');
                       },
                       icon: Icon(Icons.comment),
                       labelColor: Colors.white,
@@ -322,7 +322,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                                     child: Text(
                                                       'Placement Material',
                                                       style: TextStyle(
-                                                          fontSize: hp(3),
+                                                          fontSize: hp(2.4),
                                                           fontWeight:
                                                               FontWeight.bold,
                                                           fontFamily:
@@ -401,7 +401,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                                       flex: 2,
                                                       child: Text('Books',
                                                           style: TextStyle(
-                                                              fontSize: hp(3),
+                                                              fontSize: hp(2.6),
                                                               fontWeight:
                                                                   FontWeight
                                                                       .bold,
@@ -450,7 +450,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                                         style: TextStyle(
                                                             fontWeight:
                                                                 FontWeight.bold,
-                                                            fontSize: hp(3),
+                                                            fontSize: hp(2.6),
                                                             fontFamily:
                                                                 'cardTextStyle')),
                                                   )
@@ -517,7 +517,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                                     flex: 2,
                                                     child: Text('Course Notes',
                                                         style: TextStyle(
-                                                            fontSize: hp(3),
+                                                            fontSize: hp(2.4),
                                                             fontWeight:
                                                                 FontWeight.bold,
                                                             fontFamily:
