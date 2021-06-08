@@ -38,12 +38,12 @@ class Splash extends StatelessWidget {
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
     return SplashScreen(
-      seconds: 1,
+      seconds: 5,
       navigateAfterSeconds: HomeScreen(),
       image: Image.asset("assets/images/logo.png"),
-      photoSize: //(size.height + size.width) * .5,
-          sqrt(size.height * size.height + size.width * size.width) * 0.2,
-      //MediaQuery.of(context).size.width * .3,
+      photoSize:
+          sqrt(size.height * size.height + size.width * size.width) * 0.19,
+      //MediaQuery.of(context).size.width * .25,
       backgroundColor: Colors.red[300],
       loaderColor: Colors.white,
     );
