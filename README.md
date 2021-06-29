@@ -15,9 +15,6 @@ Features:
 
 - Neat and user-friendly UI
 
-![image](https://user-images.githubusercontent.com/59205969/123856456-bdc5f900-d93e-11eb-9d17-a9dcd412e3eb.png)
-
-
-![image](https://user-images.githubusercontent.com/59205969/123856356-9f5ffd80-d93e-11eb-9a05-fa93f552bfe9.png)
+![image](https://user-images.githubusercontent.com/59205969/123856456-bdc5f900-d93e-11eb-9d17-a9dcd412e3eb.png) ![image](https://user-images.githubusercontent.com/59205969/123856356-9f5ffd80-d93e-11eb-9a05-fa93f552bfe9.png)
 
 
