@@ -63,6 +63,8 @@ class _booksyearfourState extends State<booksyearfour>with SingleTickerProviderS
       length: 2,
       child: Scaffold(
           appBar: AppBar(
+            centerTitle: true,
+
             backgroundColor: Colors.yellow.shade800,
             title: Text('Fourth Year',style: TextStyle(
               fontSize: hp(5),

@@ -78,6 +78,8 @@ class _yearoneState extends State<yearone>
       child: Scaffold(
           backgroundColor: Colors.grey[200],
           appBar: AppBar(
+            centerTitle: true,
+
             backgroundColor: Colors.blue,
             title: Text('First Year'),
             bottom: TabBar(

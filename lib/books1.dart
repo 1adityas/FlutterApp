@@ -90,9 +90,12 @@ class _booksyearoneState extends State<booksyearone>
       length: 2,
       child: Scaffold(
           appBar: AppBar(
+            centerTitle: true,
             backgroundColor: Colors.blue,
             title: Text('First Year',
                 style: TextStyle(
+                  fontFamily: 'Gfont',
+                  // fontWeight: FontWeight.bold,
                   fontSize: hp(5),
                 )),
             bottom: TabBar(

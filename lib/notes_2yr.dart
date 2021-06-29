@@ -97,6 +97,8 @@ class _yeartwoState extends State<yeartwo>
       child: Scaffold(
           backgroundColor: Colors.grey[200],
           appBar: AppBar(
+            centerTitle: true,
+
             backgroundColor: Colors.red,
             title: Text('Second Year'),
             bottom: TabBar(

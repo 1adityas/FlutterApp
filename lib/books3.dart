@@ -88,6 +88,7 @@ class _booksyearthreeState extends State<booksyearthree>
       length: 2,
       child: Scaffold(
           appBar: AppBar(
+            centerTitle: true,
             backgroundColor: Colors.purple,
             title: Text('Third Year',
                 style: TextStyle(
